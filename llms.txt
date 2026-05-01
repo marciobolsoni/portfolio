@@ -1,0 +1,8 @@
+## Pages
+- [About - Marcio Bolsoni](/about): Professional background, skills, and experience of Marcio Bolsoni, Cloud AWS Developer.
+- [Experience - Marcio Bolsoni](/experience): Professional journey and career achievements in cloud architecture.
+- [GitOps CI/CD Suite - DevOps Project](/gitops): Fully Automated Delivery Pipeline for High-Velocity Teams using GitHub Actions, AWS CodeSuite, and Terraform.
+- [Managed Kubernetes (EKS) - Enterprise Kubernetes Deployment](/managedkuberneteseks): Enterprise-grade Amazon EKS deployment featuring Karpenter auto-scaling, Calico network policies, and OIDC authentication.
+- [Multi-Region DR Strategy - Infrastructure Project](/multiregiondr): Zero-data-loss disaster recovery strategy using AWS multi-region architecture and Terraform.
+- [Observability Platform - Monitoring & Observability](/observabilityplatform): Scalable Observability Stack on AWS using Prometheus and Grafana to track microservices performance and SLA compliance.
+- [Skills Matrix - Marcio Bolsoni](/skills): Technical expertise and proficiency in AWS cloud services and infrastructure tools.
