@@ -203,10 +203,25 @@ if (window.navigation && window.self !== window.top) {
 	<body>
 		<div id="root"></div>
 		<script>
-document.addEventListener('DOMContentLoaded',function(){
-var l=document.querySelectorAll('a[href="https://github.com"]');
-l.forEach(function(a){a.href='https://github.com/marciobolsoni';});
-});
+(function(){
+	var TARGET = 'https://github.com';
+	var FIXED  = 'https://github.com/marciobolsoni';
+	function fix(){
+		document.querySelectorAll('a[href="' + TARGET + '"]').forEach(function(a){
+			a.href = FIXED;
+		});
+	}
+	var obs = new MutationObserver(fix);
+	function start(){
+		obs.observe(document.body, {childList:true, subtree:true});
+		fix();
+	}
+	if(document.readyState === 'loading'){
+		document.addEventListener('DOMContentLoaded', start);
+	} else {
+		start();
+	}
+})();
 </script>
 	</body>
 </html>
