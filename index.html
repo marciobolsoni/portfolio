@@ -74,9 +74,9 @@ function handleViteOverlay(node) {
 </script>
 		<script type="module">
 const originalConsoleError = console.error;
-const MATCH_LINE_COL_REGEX = /:(\d+):(\d+)\)?\s*$/; // regex to match the :lineNum:colNum
-const MATCH_AT_REGEX = /^\s*at\s+(?:async\s+)?(?:.*?\s+)?\(?/; // regex to remove the 'at' keyword and any 'async' or function name
-const MATCH_PATH_REGEX = /^\//; // regex to remove the leading slash
+const MATCH_LINE_COL_REGEX = /:(\d+):(\d+)\)?\s*$/;
+const MATCH_AT_REGEX = /^\s*at\s+(?:async\s+)?(?:.*?\s+)?\(?/;
+const MATCH_PATH_REGEX = /^\//;
 
 function parseStackFrameLine(line) {
 	const lineColMatch = line.match(MATCH_LINE_COL_REGEX);
@@ -102,9 +102,7 @@ function parseStackFrameLine(line) {
 function getFilePathFromStack(stack, skipFrames = 0) {
 	if (!stack || typeof stack !== 'string') return null;
 	const lines = stack.split('\n').slice(1);
-
 	const frames = lines.map(line => parseStackFrameLine(line.replace(/\r$/, ''))).filter(Boolean);
-
 	return frames[skipFrames] ?? null;
 }
 
@@ -147,7 +145,6 @@ const originalFetch = window.fetch;
 window.fetch = function(...args) {
 	const url = args[0] instanceof Request ? args[0].url : args[0];
 
-	// Skip WebSocket URLs
 	if (url.startsWith('ws:') || url.startsWith('wss:')) {
 		return originalFetch.apply(this, args);
 	}
@@ -156,7 +153,6 @@ window.fetch = function(...args) {
 		.then(async response => {
 			const contentType = response.headers.get('Content-Type') || '';
 
-			// Exclude HTML document responses
 			const isDocumentResponse =
 				contentType.includes('text/html') ||
 				contentType.includes('application/xhtml+xml');
@@ -206,5 +202,11 @@ if (window.navigation && window.self !== window.top) {
 	</head>
 	<body>
 		<div id="root"></div>
+		<script>
+document.addEventListener('DOMContentLoaded',function(){
+var l=document.querySelectorAll('a[href="https://github.com"]');
+l.forEach(function(a){a.href='https://github.com/marciobolsoni';});
+});
+</script>
 	</body>
 </html>
