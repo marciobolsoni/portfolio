@@ -49,7 +49,7 @@ export const projects: Project[] = [
     ],
     whatILearned:
       "Serverless is cheaper at small scale, but only if you treat IAM, observability and cold starts as first-class concerns from day one. Single-table DynamoDB design is unforgiving of schema drift — invest in modelling before code.",
-    diagramUrl: "/diagrams/serverless-ecommerce-aws.png",
+    diagramUrl: "/diagrams/serverless-ecommerce-aws.svg",
   },
 
   // -------------------------------------------------------------------------
@@ -80,7 +80,7 @@ export const projects: Project[] = [
     ],
     whatILearned:
       "The S3 + DynamoDB backend pattern is non-negotiable for any team work. And `tfstate` is the single most sensitive file in the repo — guard it like a secret, never commit it.",
-    diagramUrl: "/diagrams/terraform-on-aws.png",
+    diagramUrl: "/diagrams/terraform-on-aws.svg",
   },
 
   // -------------------------------------------------------------------------
@@ -111,7 +111,7 @@ export const projects: Project[] = [
     ],
     whatILearned:
       "Probes are not optional. Without a readiness probe, Kubernetes routes traffic to a pod that's still starting and you get a wave of 502s on every deploy. Most container outages I've seen trace back to missing or wrong probes.",
-    diagramUrl: "/diagrams/kube-news.png",
+    diagramUrl: "/diagrams/kube-news.svg",
   },
 
   // -------------------------------------------------------------------------
@@ -141,7 +141,7 @@ export const projects: Project[] = [
     ],
     whatILearned:
       "AWS-native CI/CD is verbose but excellent for compliance-heavy environments — every action lands in CloudTrail. For pure speed on a small team, GitHub Actions is usually faster to iterate on. Knowing both is the right answer.",
-    diagramUrl: "/diagrams/codepipeline-s3-game.png",
+    diagramUrl: "/diagrams/codepipeline-s3-game.svg",
   },
 ];
 
