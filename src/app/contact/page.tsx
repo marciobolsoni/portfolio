@@ -6,7 +6,7 @@ import { Mail, Linkedin, Github, MapPin, Send } from "lucide-react";
 // IMPORTANT: replace with your real Formspree (or similar) endpoint before deploying.
 // Sign up at https://formspree.io, create a form, and paste the action URL here.
 // Until you replace this, the fallback is to open the user's mail client.
-const FORM_ENDPOINT = "https://formspree.io/f/REPLACE_WITH_YOUR_ID";
+const FORM_ENDPOINT = "https://formspree.io/f/mqenlaer";
 
 export default function ContactPage() {
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">(
