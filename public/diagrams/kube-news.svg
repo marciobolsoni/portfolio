@@ -1,3 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-label="Kube-news on Kubernetes architecture">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0f1f"/>
+      <stop offset="100%" stop-color="#0d1428"/>
+    </linearGradient>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#86efac"/>
+    </marker>
+    <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7dd3fc"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dd344c"/>
+    </marker>
+    <symbol id="ico-pod" viewBox="0 0 60 60">
+      <rect width="60" height="60" rx="6" fill="#326CE5"/>
+      <polygon points="30,12 46,22 46,40 30,50 14,40 14,22" fill="none" stroke="#fff" stroke-width="2"/>
+      <text x="30" y="36" text-anchor="middle" fill="#fff" font-family="ui-monospace,monospace" font-size="10" font-weight="700">POD</text>
+    </symbol>
+    <symbol id="ico-svc" viewBox="0 0 60 60">
+      <rect width="60" height="60" rx="6" fill="#86efac"/>
+      <circle cx="30" cy="30" r="14" fill="none" stroke="#0a0f1f" stroke-width="2"/>
+      <circle cx="30" cy="30" r="6" fill="#0a0f1f"/>
+    </symbol>
+    <symbol id="ico-ingress" viewBox="0 0 60 60">
+      <rect width="60" height="60" rx="6" fill="#8C4FFF"/>
+      <path d="M16 30 L46 30" stroke="#fff" stroke-width="2.4" fill="none"/>
+      <path d="M40 22 L46 30 L40 38" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="14" y="18" width="8" height="24" rx="2" fill="none" stroke="#fff" stroke-width="2"/>
+    </symbol>
+    <symbol id="ico-postgres" viewBox="0 0 60 60">
+      <rect width="60" height="60" rx="6" fill="#336791"/>
+      <ellipse cx="30" cy="20" rx="14" ry="4" fill="none" stroke="#fff" stroke-width="2"/>
+      <path d="M16 20 V40 a14 4 0 0 0 28 0 V20" fill="none" stroke="#fff" stroke-width="2"/>
+      <ellipse cx="30" cy="30" rx="14" ry="4" fill="none" stroke="#fff" stroke-width="1.5" opacity="0.7"/>
+      <text x="30" y="48" text-anchor="middle" fill="#fff" font-family="ui-monospace,monospace" font-size="8" font-weight="700">SQL</text>
+    </symbol>
+    <symbol id="ico-pvc" viewBox="0 0 60 60">
+      <rect width="60" height="60" rx="6" fill="#326CE5"/>
+      <rect x="14" y="16" width="32" height="28" rx="3" fill="none" stroke="#fff" stroke-width="2"/>
+      <line x1="14" y1="22" x2="46" y2="22" stroke="#fff" stroke-width="1.5"/>
+      <line x1="14" y1="28" x2="46" y2="28" stroke="#fff" stroke-width="1.5" opacity="0.7"/>
+      <line x1="14" y1="34" x2="46" y2="34" stroke="#fff" stroke-width="1.5" opacity="0.5"/>
+    </symbol>
+    <symbol id="ico-cm" viewBox="0 0 60 60">
+      <rect width="60" height="60" rx="6" fill="#1f2937" stroke="#7dd3fc" stroke-width="2"/>
+      <rect x="14" y="14" width="32" height="32" rx="2" fill="none" stroke="#7dd3fc" stroke-width="2"/>
+      <line x1="20" y1="22" x2="40" y2="22" stroke="#7dd3fc" stroke-width="1.5"/>
+      <line x1="20" y1="28" x2="40" y2="28" stroke="#7dd3fc" stroke-width="1.5"/>
+      <line x1="20" y1="34" x2="34" y2="34" stroke="#7dd3fc" stroke-width="1.5"/>
+    </symbol>
+    <symbol id="ico-secret" viewBox="0 0 60 60">
+      <rect width="60" height="60" rx="6" fill="#DD344C"/>
+      <rect x="18" y="26" width="24" height="20" rx="2" fill="none" stroke="#fff" stroke-width="2"/>
+      <path d="M22 26 V20 a8 8 0 0 1 16 0 V26" fill="none" stroke="#fff" stroke-width="2"/>
+      <circle cx="30" cy="36" r="2.5" fill="#fff"/>
+    </symbol>
+    <symbol id="ico-browser" viewBox="0 0 60 60">
+      <rect width="60" height="60" rx="6" fill="#1f2937" stroke="#7dd3fc" stroke-width="2"/>
+      <rect x="10" y="14" width="40" height="32" rx="3" fill="none" stroke="#7dd3fc" stroke-width="1.6"/>
+      <line x1="10" y1="22" x2="50" y2="22" stroke="#7dd3fc" stroke-width="1.6"/>
+      <circle cx="14" cy="18" r="1.2" fill="#7dd3fc"/>
+      <circle cx="18" cy="18" r="1.2" fill="#7dd3fc"/>
+    </symbol>
+    <symbol id="ico-dns" viewBox="0 0 60 60">
+      <rect width="60" height="60" rx="6" fill="#8C4FFF"/>
+      <text x="30" y="36" text-anchor="middle" fill="#fff" font-family="Inter,sans-serif" font-size="14" font-weight="700">DNS</text>
+    </symbol>
+  </defs>
+
+  <rect width="1200" height="700" fill="url(#bg)"/>
+
+  <text x="600" y="38" fill="#7dd3fc" font-family="Inter,sans-serif" font-size="13" letter-spacing="3" text-anchor="middle">KUBE-NEWS — KUBERNETES DEPLOYMENT</text>
+  <text x="600" y="60" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" text-anchor="middle">marciobolsoni / kube-news · multi-stage Dockerfile · zero-downtime rolling deploys</text>
+
+  <g transform="translate(40, 320)">
+    <use href="#ico-browser" width="60" height="60"/>
+    <text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">User</text>
+  </g>
+
+  <g transform="translate(180, 320)">
+    <use href="#ico-dns" width="60" height="60"/>
+    <text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">DNS · TLS</text>
+    <text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">Route 53 + ACM</text>
+  </g>
+
+  <rect x="320" y="100" width="840" height="540" rx="14" fill="none" stroke="#326CE5" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.6"/>
+  <text x="340" y="124" fill="#326CE5" font-family="Inter,sans-serif" font-size="11" letter-spacing="2">KUBERNETES CLUSTER</text>
+
+  <g transform="translate(360, 320)">
+    <use href="#ico-ingress" width="60" height="60"/>
+    <text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">Ingress</text>
+    <text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">TLS termination</text>
+  </g>
+
+  <g transform="translate(500, 320)">
+    <use href="#ico-svc" width="60" height="60"/>
+    <text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">Service</text>
+    <text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">ClusterIP</text>
+  </g>
+
+  <rect x="640" y="180" width="320" height="280" rx="10" fill="rgba(50,108,229,0.05)" stroke="#326CE5" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="800" y="206" text-anchor="middle" fill="#326CE5" font-family="Inter,sans-serif" font-size="10" letter-spacing="2">DEPLOYMENT (3 replicas)</text>
+  <text x="800" y="222" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">rolling update · maxUnavailable: 1</text>
+
+  <g transform="translate(680, 240)">
+    <use href="#ico-pod" width="60" height="60"/>
+    <text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">Pod</text>
+  </g>
+  <g transform="translate(810, 240)">
+    <use href="#ico-pod" width="60" height="60"/>
+    <text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">Pod</text>
+  </g>
+  <g transform="translate(745, 360)">
+    <use href="#ico-pod" width="60" height="60"/>
+    <text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">Pod</text>
+  </g>
+
+  <text x="800" y="450" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">Probes → /health · liveness · readiness</text>
+
+  <g transform="translate(540, 510)">
+    <use href="#ico-postgres" width="60" height="60"/>
+    <text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">PostgreSQL</text>
+    <text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">StatefulSet</text>
+  </g>
+
+  <g transform="translate(700, 510)">
+    <use href="#ico-pvc" width="60" height="60"/>
+    <text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">PVC</text>
+    <text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">10 GiB</text>
+  </g>
+
+  <g transform="translate(380, 510)">
+    <use href="#ico-cm" width="60" height="60"/>
+    <text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">ConfigMap</text>
+    <text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">env (non-secret)</text>
+  </g>
+
+  <g transform="translate(380, 160)">
+    <use href="#ico-secret" width="60" height="60"/>
+    <text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">Secret</text>
+    <text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">DB credentials</text>
+  </g>
+
+  <g fill="none" stroke-width="2">
+    <path d="M100 350 L180 350" stroke="#7dd3fc" marker-end="url(#ar2)"/>
+    <path d="M240 350 L360 350" stroke="#7dd3fc" marker-end="url(#ar2)"/>
+    <path d="M420 350 L500 350" stroke="#86efac" marker-end="url(#ar)"/>
+    <path d="M560 340 L680 270" stroke="#86efac" marker-end="url(#ar)"/>
+    <path d="M560 360 L810 270" stroke="#86efac" marker-end="url(#ar)"/>
+    <path d="M560 360 L745 390" stroke="#86efac" marker-end="url(#ar)"/>
+    <path d="M775 420 L600 510" stroke="#86efac" marker-end="url(#ar)" opacity="0.85"/>
+    <path d="M600 540 L700 540" stroke="#7dd3fc" marker-end="url(#ar2)"/>
+    <path d="M440 540 L745 420" stroke="#7dd3fc" marker-end="url(#ar2)" stroke-dasharray="3 2" opacity="0.7"/>
+    <path d="M440 200 L570 510" stroke="#dd344c" marker-end="url(#arR)" stroke-dasharray="4 3" opacity="0.8"/>
+  </g>
+
+  <g font-family="Inter,sans-serif" font-size="10" fill="#94a3b8">
+    <text x="120" y="342">HTTPS</text>
+    <text x="270" y="342">443</text>
+    <text x="440" y="342">round-robin</text>
+    <text x="640" y="535">storage</text>
+    <text x="445" y="445" fill="#7dd3fc">env</text>
+    <text x="450" y="385" fill="#dd344c">creds</text>
+  </g>
+
+  <g transform="translate(320, 660)" font-family="Inter,sans-serif" font-size="10" fill="#94a3b8">
+    <circle cx="6" cy="6" r="4" fill="#86efac"/><text x="18" y="9">HTTP traffic</text>
+    <circle cx="120" cy="6" r="4" fill="#7dd3fc"/><text x="132" y="9">DNS / config</text>
+    <circle cx="240" cy="6" r="4" fill="#dd344c"/><text x="252" y="9">Secret material</text>
+    <circle cx="360" cy="6" r="4" fill="#326CE5"/><text x="372" y="9">Kubernetes object</text>
+  </g>
+</svg>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="Kube-news on Kubernetes architecture diagram">
   <defs>
     <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
