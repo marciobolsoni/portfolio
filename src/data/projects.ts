@@ -93,6 +93,7 @@ export const projects: Project[] = [
     category: "Containers",
     tech: ["Docker", "Kubernetes", "Node.js", "PostgreSQL", "Helm", "Ingress", "kubectl"],
     repo: "https://github.com/marciobolsoni/kube-news",
+    liveDemo: "https://kube-news.marciobolsoni.cloud",
     problem:
       "I wanted to prove I could run a real stateful-ish workload on Kubernetes — not just deploy nginx — and understand the trade-offs between Deployments, StatefulSets, ConfigMaps and Secrets in practice.",
     solution:
@@ -124,6 +125,7 @@ export const projects: Project[] = [
     category: "CI/CD",
     tech: ["AWS CodePipeline", "CodeBuild", "S3", "CloudFront", "IAM", "buildspec.yml", "GitHub"],
     repo: "https://github.com/marciobolsoni/codepipeline-s3-game",
+    liveDemo: "https://game.marciobolsoni.cloud",
     problem:
       "Manual `aws s3 sync` deploys are fast to set up and the first thing that breaks the moment a teammate joins. I wanted a properly gated pipeline: source on GitHub, automated build, deploy to S3, with permissions scoped exactly to the resources involved.",
     solution:
