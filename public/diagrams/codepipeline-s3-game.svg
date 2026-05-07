@@ -1,3 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-label="CodePipeline to S3 static deploy architecture">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0f1f"/>
+      <stop offset="100%" stop-color="#0d1428"/>
+    </linearGradient>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#86efac"/>
+    </marker>
+    <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7dd3fc"/>
+    </marker>
+    <marker id="arP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a78bfa"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dd344c"/>
+    </marker>
+    <symbol id="ico-engineer" viewBox="0 0 60 60">
+      <rect width="60" height="60" rx="6" fill="#1f2937" stroke="#7dd3fc" stroke-width="2"/>
+      <circle cx="30" cy="22" r="6" fill="none" stroke="#7dd3fc" stroke-width="2"/>
+      <path d="M16 46 a14 14 0 0 1 28 0" fill="none" stroke="#7dd3fc" stroke-width="2"/>
+    </symbol>
+    <symbol id="ico-github" viewBox="0 0 60 60">
+      <rect width="60" height="60" rx="6" fill="#1f2937"/>
+      <path d="M30 14 a16 16 0 0 0 -5 31.2 c0.8 0.16 1.1 -0.36 1.1 -0.8 v-2.8 c-4.4 1 -5.4 -2.1 -5.4 -2.1 c-0.7 -1.9 -1.8 -2.4 -1.8 -2.4 c-1.5 -1 0.1 -1 0.1 -1 c1.6 0.1 2.5 1.7 2.5 1.7 c1.4 2.5 3.8 1.8 4.7 1.4 c0.1 -1.1 0.6 -1.8 1 -2.2 c-3.5 -0.4 -7.2 -1.8 -7.2 -7.9 c0 -1.7 0.6 -3.2 1.6 -4.3 c-0.2 -0.4 -0.7 -2 0.2 -4.2 c0 0 1.3 -0.4 4.4 1.6 c1.3 -0.4 2.7 -0.5 4 -0.5 c1.3 0 2.7 0.2 4 0.5 c3 -2 4.4 -1.6 4.4 -1.6 c0.9 2.2 0.3 3.8 0.2 4.2 c1 1.1 1.6 2.6 1.6 4.3 c0 6.2 -3.7 7.5 -7.2 7.9 c0.6 0.5 1.1 1.5 1.1 3 v4.4 c0 0.4 0.3 0.9 1.1 0.8 A16 16 0 0 0 30 14 Z" fill="#fff"/>
+    </symbol>
+    <symbol id="ico-codepipeline" viewBox="0 0 60 60">
+      <rect width="60" height="60" rx="6" fill="#C925D1"/>
+      <circle cx="20" cy="30" r="5" fill="none" stroke="#fff" stroke-width="2"/>
+      <circle cx="40" cy="30" r="5" fill="none" stroke="#fff" stroke-width="2"/>
+      <line x1="25" y1="30" x2="35" y2="30" stroke="#fff" stroke-width="2"/>
+      <path d="M14 18 L20 25 L26 18 M14 42 L20 35 L26 42" stroke="#fff" stroke-width="2" fill="none"/>
+    </symbol>
+    <symbol id="ico-codebuild" viewBox="0 0 60 60">
+      <rect width="60" height="60" rx="6" fill="#C925D1"/>
+      <path d="M16 20 L26 30 L16 40" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="30" y1="42" x2="44" y2="42" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="ico-codedeploy" viewBox="0 0 60 60">
+      <rect width="60" height="60" rx="6" fill="#C925D1"/>
+      <path d="M30 14 L42 22 V38 L30 46 L18 38 V22 Z" fill="none" stroke="#fff" stroke-width="2"/>
+      <path d="M24 30 L28 34 L36 26" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="ico-s3" viewBox="0 0 60 60">
+      <rect width="60" height="60" rx="6" fill="#7AA116"/>
+      <ellipse cx="30" cy="20" rx="14" ry="4" fill="none" stroke="#fff" stroke-width="2"/>
+      <path d="M16 20 V40 a14 4 0 0 0 28 0 V20" fill="none" stroke="#fff" stroke-width="2"/>
+    </symbol>
+    <symbol id="ico-cloudfront" viewBox="0 0 60 60">
+      <rect width="60" height="60" rx="6" fill="#8C4FFF"/>
+      <circle cx="30" cy="30" r="14" fill="none" stroke="#fff" stroke-width="2.2"/>
+      <path d="M16 30 H44 M30 16 V44 M19 19 L41 41 M41 19 L19 41" stroke="#fff" stroke-width="1.4" fill="none" opacity="0.85"/>
+    </symbol>
+    <symbol id="ico-iam" viewBox="0 0 60 60">
+      <rect width="60" height="60" rx="6" fill="#DD344C"/>
+      <path d="M30 14 L44 20 V32 a14 14 0 0 1 -14 14 a14 14 0 0 1 -14 -14 V20 Z" fill="none" stroke="#fff" stroke-width="2.2"/>
+      <path d="M22 30 L28 36 L40 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="ico-cloudtrail" viewBox="0 0 60 60">
+      <rect width="60" height="60" rx="6" fill="#E7157B"/>
+      <path d="M14 44 L24 30 L34 38 L46 18" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="14" cy="44" r="2" fill="#fff"/>
+      <circle cx="24" cy="30" r="2" fill="#fff"/>
+      <circle cx="34" cy="38" r="2" fill="#fff"/>
+      <circle cx="46" cy="18" r="2" fill="#fff"/>
+    </symbol>
+    <symbol id="ico-browser" viewBox="0 0 60 60">
+      <rect width="60" height="60" rx="6" fill="#1f2937" stroke="#7dd3fc" stroke-width="2"/>
+      <rect x="10" y="14" width="40" height="32" rx="3" fill="none" stroke="#7dd3fc" stroke-width="1.6"/>
+      <line x1="10" y1="22" x2="50" y2="22" stroke="#7dd3fc" stroke-width="1.6"/>
+      <circle cx="14" cy="18" r="1.2" fill="#7dd3fc"/>
+      <circle cx="18" cy="18" r="1.2" fill="#7dd3fc"/>
+    </symbol>
+  </defs>
+
+  <rect width="1200" height="700" fill="url(#bg)"/>
+
+  <text x="600" y="38" fill="#7dd3fc" font-family="Inter,sans-serif" font-size="13" letter-spacing="3" text-anchor="middle">CODEPIPELINE → S3 STATIC DEPLOY</text>
+  <text x="600" y="60" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" text-anchor="middle">marciobolsoni / codepipeline-s3-game · push-to-deploy < 90s · audited via CloudTrail</text>
+
+  <rect x="240" y="100" width="920" height="500" rx="14" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="6 4" opacity="0.5"/>
+  <text x="256" y="124" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" letter-spacing="2">AWS CLOUD</text>
+
+  <g transform="translate(40, 320)">
+    <use href="#ico-engineer" width="60" height="60"/>
+    <text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">Engineer</text>
+    <text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">git push</text>
+  </g>
+
+  <g transform="translate(180, 320)">
+    <use href="#ico-github" width="60" height="60"/>
+    <text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">GitHub</text>
+    <text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">main branch</text>
+  </g>
+
+  <g transform="translate(320, 320)">
+    <use href="#ico-codepipeline" width="60" height="60"/>
+    <text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">CodePipeline</text>
+    <text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">orchestrator</text>
+  </g>
+
+  <g transform="translate(480, 200)">
+    <use href="#ico-codebuild" width="60" height="60"/>
+    <text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">CodeBuild</text>
+    <text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">buildspec.yml</text>
+  </g>
+
+  <g transform="translate(480, 320)">
+    <use href="#ico-s3" width="60" height="60"/>
+    <text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">S3 Artifact</text>
+    <text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">versioned</text>
+  </g>
+
+  <g transform="translate(480, 440)">
+    <use href="#ico-codedeploy" width="60" height="60"/>
+    <text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">Deploy Stage</text>
+    <text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">aws s3 sync</text>
+  </g>
+
+  <g transform="translate(720, 320)">
+    <use href="#ico-s3" width="60" height="60"/>
+    <text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">S3 Site</text>
+    <text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">static origin</text>
+  </g>
+
+  <g transform="translate(900, 320)">
+    <use href="#ico-cloudfront" width="60" height="60"/>
+    <text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">CloudFront</text>
+    <text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">edge cache</text>
+  </g>
+
+  <g transform="translate(1060, 320)">
+    <use href="#ico-browser" width="60" height="60"/>
+    <text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">Player</text>
+    <text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">browser</text>
+  </g>
+
+  <g transform="translate(280, 480)">
+    <use href="#ico-iam" width="60" height="60"/>
+    <text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">IAM</text>
+    <text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">role per stage</text>
+  </g>
+
+  <g transform="translate(720, 480)">
+    <use href="#ico-cloudtrail" width="60" height="60"/>
+    <text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">CloudTrail</text>
+    <text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">audit</text>
+  </g>
+
+  <g fill="none" stroke-width="2">
+    <path d="M100 350 L180 350" stroke="#7dd3fc" marker-end="url(#ar2)"/>
+    <path d="M240 350 L320 350" stroke="#86efac" marker-end="url(#ar)"/>
+    <path d="M380 340 L490 250" stroke="#86efac" marker-end="url(#ar)"/>
+    <path d="M540 270 L540 320" stroke="#a78bfa" marker-end="url(#arP)"/>
+    <path d="M540 380 L540 440" stroke="#86efac" marker-end="url(#ar)"/>
+    <path d="M540 460 L720 360" stroke="#86efac" marker-end="url(#ar)"/>
+    <path d="M780 350 L900 350" stroke="#a78bfa" marker-end="url(#arP)"/>
+    <path d="M960 350 L1060 350" stroke="#7dd3fc" marker-end="url(#ar2)"/>
+    <path d="M340 480 L350 380" stroke="#dd344c" marker-end="url(#arR)" stroke-dasharray="4 3"/>
+    <path d="M380 360 L740 480" stroke="#94a3b8" marker-end="url(#ar)" stroke-dasharray="3 3" opacity="0.7"/>
+  </g>
+
+  <g font-family="Inter,sans-serif" font-size="10" fill="#94a3b8">
+    <text x="120" y="342">push</text>
+    <text x="260" y="342">webhook</text>
+    <text x="395" y="285">source</text>
+    <text x="546" y="298" fill="#a78bfa">artifact</text>
+    <text x="546" y="425">sync</text>
+    <text x="615" y="395">deploy</text>
+    <text x="820" y="342" fill="#a78bfa">origin</text>
+    <text x="985" y="342">CDN</text>
+    <text x="345" y="430" fill="#dd344c">least-priv</text>
+    <text x="540" y="450">audit trail</text>
+  </g>
+
+  <g transform="translate(280, 660)" font-family="Inter,sans-serif" font-size="10" fill="#94a3b8">
+    <circle cx="6" cy="6" r="4" fill="#86efac"/><text x="18" y="9">Pipeline flow</text>
+    <circle cx="120" cy="6" r="4" fill="#7dd3fc"/><text x="132" y="9">Network</text>
+    <circle cx="220" cy="6" r="4" fill="#a78bfa"/><text x="232" y="9">Artifact / origin</text>
+    <circle cx="360" cy="6" r="4" fill="#dd344c"/><text x="372" y="9">IAM (least-priv)</text>
+    <circle cx="500" cy="6" r="4" fill="#94a3b8"/><text x="512" y="9">Audit (CloudTrail)</text>
+  </g>
+</svg>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="CodePipeline to S3 static deploy architecture diagram">
   <defs>
     <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
