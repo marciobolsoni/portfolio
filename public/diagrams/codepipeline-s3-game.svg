@@ -20,7 +20,7 @@
   <rect width="1200" height="700" fill="url(#bg)"/>
 
   <text x="600" y="38" fill="#7dd3fc" font-family="Inter,sans-serif" font-size="13" letter-spacing="3" text-anchor="middle">CODEPIPELINE → S3 STATIC DEPLOY</text>
-  <text x="600" y="60" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" text-anchor="middle">marciobolsoni / codepipeline-s3-game · push-to-deploy < 90s · audited via CloudTrail</text>
+  <text x="600" y="60" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" text-anchor="middle">marciobolsoni / codepipeline-s3-game · push-to-deploy &lt; 90s · audited via CloudTrail</text>
 
   <rect x="240" y="100" width="920" height="500" rx="14" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="6 4" opacity="0.5"/>
   <text x="256" y="124" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" letter-spacing="2">AWS CLOUD</text>
