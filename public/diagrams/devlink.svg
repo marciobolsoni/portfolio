@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" role="img" aria-label="DevLink on k3s architecture">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0f1f"/>
+      <stop offset="100%" stop-color="#0d1428"/>
+    </linearGradient>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#86efac"/></marker>
+    <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#7dd3fc"/></marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#dd344c"/></marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#f59e0b"/></marker>
+    <marker id="arP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#a78bfa"/></marker>
+    <symbol id="ico-pod" viewBox="0 0 60 60"><rect width="60" height="60" rx="6" fill="#326CE5"/><polygon points="30,12 46,22 46,40 30,50 14,40 14,22" fill="none" stroke="#fff" stroke-width="2"/><text x="30" y="36" text-anchor="middle" fill="#fff" font-family="ui-monospace,monospace" font-size="10" font-weight="700">POD</text></symbol>
+    <symbol id="ico-ingress" viewBox="0 0 60 60"><rect width="60" height="60" rx="6" fill="#8C4FFF"/><path d="M16 30 L46 30" stroke="#fff" stroke-width="2.4" fill="none"/><path d="M40 22 L46 30 L40 38" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="14" y="18" width="8" height="24" rx="2" fill="none" stroke="#fff" stroke-width="2"/></symbol>
+    <symbol id="ico-postgres" viewBox="0 0 60 60"><rect width="60" height="60" rx="6" fill="#336791"/><ellipse cx="30" cy="20" rx="14" ry="4" fill="none" stroke="#fff" stroke-width="2"/><path d="M16 20 V40 a14 4 0 0 0 28 0 V20" fill="none" stroke="#fff" stroke-width="2"/><ellipse cx="30" cy="30" rx="14" ry="4" fill="none" stroke="#fff" stroke-width="1.5" opacity="0.7"/><text x="30" y="48" text-anchor="middle" fill="#fff" font-family="ui-monospace,monospace" font-size="8" font-weight="700">SQL</text></symbol>
+    <symbol id="ico-redis" viewBox="0 0 60 60"><rect width="60" height="60" rx="6" fill="#DC382D"/><ellipse cx="30" cy="20" rx="14" ry="4" fill="none" stroke="#fff" stroke-width="2"/><path d="M16 20 V40 a14 4 0 0 0 28 0 V20" fill="none" stroke="#fff" stroke-width="2"/><ellipse cx="30" cy="30" rx="14" ry="4" fill="none" stroke="#fff" stroke-width="1.5" opacity="0.7"/><text x="30" y="50" text-anchor="middle" fill="#fff" font-family="ui-monospace,monospace" font-size="8" font-weight="700">XADD</text></symbol>
+    <symbol id="ico-pvc" viewBox="0 0 60 60"><rect width="60" height="60" rx="6" fill="#326CE5"/><rect x="14" y="16" width="32" height="28" rx="3" fill="none" stroke="#fff" stroke-width="2"/><line x1="14" y1="22" x2="46" y2="22" stroke="#fff" stroke-width="1.5"/><line x1="14" y1="28" x2="46" y2="28" stroke="#fff" stroke-width="1.5" opacity="0.7"/><line x1="14" y1="34" x2="46" y2="34" stroke="#fff" stroke-width="1.5" opacity="0.5"/></symbol>
+    <symbol id="ico-secret" viewBox="0 0 60 60"><rect width="60" height="60" rx="6" fill="#DD344C"/><rect x="18" y="26" width="24" height="20" rx="2" fill="none" stroke="#fff" stroke-width="2"/><path d="M22 26 V20 a8 8 0 0 1 16 0 V26" fill="none" stroke="#fff" stroke-width="2"/><circle cx="30" cy="36" r="2.5" fill="#fff"/></symbol>
+    <symbol id="ico-browser" viewBox="0 0 60 60"><rect width="60" height="60" rx="6" fill="#1f2937" stroke="#7dd3fc" stroke-width="2"/><rect x="10" y="14" width="40" height="32" rx="3" fill="none" stroke="#7dd3fc" stroke-width="1.6"/><line x1="10" y1="22" x2="50" y2="22" stroke="#7dd3fc" stroke-width="1.6"/><circle cx="14" cy="18" r="1.2" fill="#7dd3fc"/><circle cx="18" cy="18" r="1.2" fill="#7dd3fc"/></symbol>
+    <symbol id="ico-dns" viewBox="0 0 60 60"><rect width="60" height="60" rx="6" fill="#8C4FFF"/><text x="30" y="36" text-anchor="middle" fill="#fff" font-family="Inter,sans-serif" font-size="14" font-weight="700">DNS</text></symbol>
+    <symbol id="ico-tf" viewBox="0 0 60 60"><rect width="60" height="60" rx="6" fill="#7c3aed"/><text x="30" y="38" text-anchor="middle" fill="#fff" font-family="Inter,sans-serif" font-size="22" font-weight="800">tf</text></symbol>
+    <symbol id="ico-ans" viewBox="0 0 60 60"><rect width="60" height="60" rx="6" fill="#1f2937" stroke="#a78bfa" stroke-width="2"/><circle cx="30" cy="30" r="13" fill="none" stroke="#a78bfa" stroke-width="2.4"/><path d="M30 17 L37 41 L30 36 L23 41 Z" fill="#a78bfa"/></symbol>
+    <symbol id="ico-gha" viewBox="0 0 60 60"><rect width="60" height="60" rx="6" fill="#1f2937" stroke="#86efac" stroke-width="2"/><circle cx="30" cy="30" r="13" fill="none" stroke="#86efac" stroke-width="2.2"/><path d="M30 21 v9 l6 4" stroke="#86efac" stroke-width="2.4" fill="none" stroke-linecap="round"/></symbol>
+    <symbol id="ico-dh" viewBox="0 0 60 60"><rect width="60" height="60" rx="6" fill="#0ea5e9"/><rect x="14" y="22" width="6" height="6" fill="#fff"/><rect x="22" y="22" width="6" height="6" fill="#fff"/><rect x="30" y="22" width="6" height="6" fill="#fff"/><rect x="22" y="14" width="6" height="6" fill="#fff"/><path d="M14 32 q4 8 14 8 t14 -8" fill="none" stroke="#fff" stroke-width="2"/></symbol>
+    <symbol id="ico-vps" viewBox="0 0 60 60"><rect width="60" height="60" rx="6" fill="#1f2937" stroke="#7dd3fc" stroke-width="2"/><rect x="14" y="14" width="32" height="8" rx="1" fill="none" stroke="#7dd3fc" stroke-width="1.5"/><rect x="14" y="26" width="32" height="8" rx="1" fill="none" stroke="#7dd3fc" stroke-width="1.5"/><rect x="14" y="38" width="32" height="8" rx="1" fill="none" stroke="#7dd3fc" stroke-width="1.5"/><circle cx="18" cy="18" r="1.4" fill="#86efac"/><circle cx="18" cy="30" r="1.4" fill="#86efac"/><circle cx="18" cy="42" r="1.4" fill="#86efac"/></symbol>
+  </defs>
+
+  <rect width="1200" height="780" fill="url(#bg)"/>
+
+  <text x="600" y="38" fill="#7dd3fc" font-family="Inter,sans-serif" font-size="13" letter-spacing="3" text-anchor="middle">DEVLINK — URL SHORTENER &amp; ANALYTICS ON K3S</text>
+  <text x="600" y="60" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" text-anchor="middle">marciobolsoni / devlink · k3s on Hetzner cpx21 · TLS via cert-manager + Let's Encrypt</text>
+
+  <g transform="translate(40, 320)"><use href="#ico-browser" width="60" height="60"/><text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">User</text></g>
+  <g transform="translate(180, 320)"><use href="#ico-dns" width="60" height="60"/><text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">DNS · TLS</text><text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">Hetzner DNS</text></g>
+
+  <rect x="320" y="100" width="840" height="540" rx="14" fill="none" stroke="#326CE5" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.6"/>
+  <text x="340" y="124" fill="#326CE5" font-family="Inter,sans-serif" font-size="11" letter-spacing="2">K3S CLUSTER · HETZNER CPX21 (single node)</text>
+
+  <g transform="translate(380, 150)"><use href="#ico-secret" width="60" height="60"/><text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">cert-manager</text><text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">Let's Encrypt</text></g>
+
+  <g transform="translate(360, 320)"><use href="#ico-ingress" width="60" height="60"/><text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">Traefik</text><text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">Ingress · TLS</text></g>
+
+  <rect x="500" y="195" width="620" height="165" rx="10" fill="rgba(50,108,229,0.05)" stroke="#326CE5" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="810" y="218" text-anchor="middle" fill="#326CE5" font-family="Inter,sans-serif" font-size="10" letter-spacing="2">DEPLOYMENTS · 2 replicas each</text>
+
+  <g transform="translate(520, 240)"><use href="#ico-pod" width="60" height="60"/><text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">frontend</text><text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">React · Vite</text></g>
+  <g transform="translate(660, 240)"><use href="#ico-pod" width="60" height="60"/><text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">auth-service</text><text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">Node · JWT</text></g>
+  <g transform="translate(800, 240)"><use href="#ico-pod" width="60" height="60"/><text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">url-service</text><text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">Node.js</text></g>
+  <g transform="translate(940, 240)"><use href="#ico-pod" width="60" height="60"/><text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">analytics</text><text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">FastAPI</text></g>
+
+  <g transform="translate(620, 470)"><use href="#ico-postgres" width="60" height="60"/><text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">PostgreSQL 16</text><text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">StatefulSet</text></g>
+  <g transform="translate(780, 470)"><use href="#ico-redis" width="60" height="60"/><text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">Redis 7</text><text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">Streams · event bus</text></g>
+  <g transform="translate(940, 470)"><use href="#ico-pvc" width="60" height="60"/><text x="30" y="78" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="11" font-weight="600">PVC</text><text x="30" y="92" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10">local-path · 10 GiB</text></g>
+
+  <g transform="translate(60, 690)"><use href="#ico-tf" width="50" height="50"/><text x="25" y="64" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="10" font-weight="600">Terraform</text></g>
+  <g transform="translate(180, 690)"><use href="#ico-ans" width="50" height="50"/><text x="25" y="64" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="10" font-weight="600">Ansible</text></g>
+  <g transform="translate(300, 690)"><use href="#ico-vps" width="50" height="50"/><text x="25" y="64" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="10" font-weight="600">cpx21 VPS</text></g>
+
+  <g transform="translate(900, 690)"><use href="#ico-gha" width="50" height="50"/><text x="25" y="64" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="10" font-weight="600">GitHub Actions</text></g>
+  <g transform="translate(1030, 690)"><use href="#ico-dh" width="50" height="50"/><text x="25" y="64" text-anchor="middle" fill="#e6edf3" font-family="Inter,sans-serif" font-size="10" font-weight="600">Docker Hub</text></g>
+
+  <g fill="none" stroke-width="2">
+    <path d="M100 350 L180 350" stroke="#7dd3fc" marker-end="url(#ar2)"/>
+    <path d="M240 350 L360 350" stroke="#7dd3fc" marker-end="url(#ar2)"/>
+    <path d="M420 340 L520 285" stroke="#86efac" marker-end="url(#ar)"/>
+    <path d="M420 348 L660 285" stroke="#86efac" marker-end="url(#ar)"/>
+    <path d="M420 356 L800 285" stroke="#86efac" marker-end="url(#ar)"/>
+    <path d="M420 364 L940 285" stroke="#86efac" marker-end="url(#ar)"/>
+    <path d="M690 305 L660 470" stroke="#86efac" marker-end="url(#ar)" opacity="0.85"/>
+    <path d="M830 305 L670 470" stroke="#86efac" marker-end="url(#ar)" opacity="0.85"/>
+    <path d="M840 305 L800 470" stroke="#f59e0b" marker-end="url(#arO)" stroke-dasharray="4 3"/>
+    <path d="M820 470 L970 305" stroke="#f59e0b" marker-end="url(#arO)" stroke-dasharray="4 3"/>
+    <path d="M680 520 L940 510" stroke="#7dd3fc" marker-end="url(#ar2)"/>
+    <path d="M410 220 L390 320" stroke="#dd344c" marker-end="url(#arR)" stroke-dasharray="4 3" opacity="0.8"/>
+    <path d="M110 715 L180 715" stroke="#a78bfa" marker-end="url(#arP)" stroke-dasharray="4 3"/>
+    <path d="M230 715 L300 715" stroke="#a78bfa" marker-end="url(#arP)" stroke-dasharray="4 3"/>
+    <path d="M340 690 L500 645" stroke="#a78bfa" marker-end="url(#arP)" stroke-dasharray="3 3" opacity="0.7"/>
+    <path d="M950 715 L1030 715" stroke="#7dd3fc" marker-end="url(#ar2)"/>
+    <path d="M1055 690 L1100 645" stroke="#7dd3fc" marker-end="url(#ar2)" stroke-dasharray="3 3" opacity="0.7"/>
+  </g>
+
+  <g font-family="Inter,sans-serif" font-size="10" fill="#94a3b8">
+    <text x="120" y="342">HTTPS</text>
+    <text x="280" y="342">443</text>
+    <text x="445" y="295">/, /api/auth, /r/{slug}, /api/stats</text>
+    <text x="690" y="415">queries</text>
+    <text x="838" y="415" fill="#f59e0b">XADD</text>
+    <text x="858" y="395" fill="#f59e0b">consume</text>
+    <text x="780" y="510">persist</text>
+    <text x="416" y="280" fill="#dd344c">cert</text>
+    <text x="135" y="708" fill="#a78bfa">provisions</text>
+    <text x="255" y="708" fill="#a78bfa">configures</text>
+    <text x="360" y="675" fill="#a78bfa">k3s</text>
+    <text x="970" y="708">push</text>
+    <text x="1078" y="675">pull</text>
+  </g>
+
+  <g transform="translate(320, 750)" font-family="Inter,sans-serif" font-size="10" fill="#94a3b8">
+    <circle cx="6" cy="6" r="4" fill="#86efac"/><text x="18" y="9">HTTP traffic</text>
+    <circle cx="110" cy="6" r="4" fill="#f59e0b"/><text x="122" y="9">async events</text>
+    <circle cx="220" cy="6" r="4" fill="#7dd3fc"/><text x="232" y="9">network / pull</text>
+    <circle cx="335" cy="6" r="4" fill="#a78bfa"/><text x="347" y="9">provisioning</text>
+    <circle cx="450" cy="6" r="4" fill="#dd344c"/><text x="462" y="9">TLS certs</text>
+  </g>
+</svg>
