@@ -2,7 +2,7 @@ import Link from "next/link";
 import HeroBackground from "@/components/HeroBackground";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
-import { ArrowRight, Award, MapPin, Github, Download } from "lucide-react";
+import { ArrowRight, Award, MapPin, Github, Download, ExternalLink } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -59,16 +59,38 @@ export default function HomePage() {
             >
               <Download size={16} /> Download my CV
             </a>
+            <a
+              href="https://cp.certmetrics.com/amazon/en/public/verify/credential/7PJFFX9K0M1Q1DS6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl glass hover:bg-white/5"
+            >
+              <Award size={16} /> Verify AWS certs
+            </a>
           </div>
           <div className="mt-10 flex flex-wrap items-center gap-6 text-sm text-muted">
-            <span className="inline-flex items-center gap-2">
+            <a
+              href="https://cp.certmetrics.com/amazon/en/public/verify/credential/7PJFFX9K0M1Q1DS6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 hover:text-ink transition group"
+              title="Verify on cp.certmetrics.com · code 7PJFFX9K0M1Q1DS6"
+            >
               <Award size={14} className="text-accent2" />
               AWS Certified Solutions Architect — Associate
-            </span>
-            <span className="inline-flex items-center gap-2">
+              <ExternalLink size={11} className="opacity-60 group-hover:opacity-100" />
+            </a>
+            <a
+              href="https://cp.certmetrics.com/amazon/en/public/verify/credential/71EZGCBCXNF4Q39M"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 hover:text-ink transition group"
+              title="Verify on cp.certmetrics.com · code 71EZGCBCXNF4Q39M"
+            >
               <Award size={14} className="text-accent2" />
               AWS Certified Cloud Practitioner
-            </span>
+              <ExternalLink size={11} className="opacity-60 group-hover:opacity-100" />
+            </a>
           </div>
         </div>
       </section>
