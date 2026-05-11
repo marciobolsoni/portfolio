@@ -94,7 +94,7 @@
     <text x="1078" y="675">pull</text>
   </g>
 
-  <g transform="translate(540, 750)" font-family="Inter,sans-serif" font-size="10" fill="#94a3b8">
+  <g transform="translate(360, 658)" font-family="Inter,sans-serif" font-size="10" fill="#94a3b8">
     <circle cx="6" cy="6" r="4" fill="#86efac"/><text x="18" y="9">HTTP traffic</text>
     <circle cx="110" cy="6" r="4" fill="#f59e0b"/><text x="122" y="9">async events</text>
     <circle cx="220" cy="6" r="4" fill="#7dd3fc"/><text x="232" y="9">network / pull</text>
