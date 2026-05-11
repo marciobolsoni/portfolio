@@ -191,6 +191,7 @@ export const projects: Project[] = [
     ],
     whatILearned:
       "Most of the value of 'k8s on a hyperscaler' disappears when you only need a single node — k3s on a cheap VPS gives you the same kubectl workflow at a fraction of the cost. Redis Streams is a sweet spot between 'just call the analytics service directly' and 'spin up Kafka' — it costs you one container and buys you real decoupling. And the Terraform + Ansible split (provision vs. configure) is worth the extra moving part: when something drifts, you know exactly which tool owns the fix.",
+    diagramUrl: "/diagrams/devlink.svg",
   },
 ];
 
