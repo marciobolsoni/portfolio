@@ -145,6 +145,52 @@ export const projects: Project[] = [
       "AWS-native CI/CD is verbose but excellent for compliance-heavy environments — every action lands in CloudTrail. For pure speed on a small team, GitHub Actions is usually faster to iterate on. Knowing both is the right answer.",
     diagramUrl: "/diagrams/codepipeline-s3-game.svg",
   },
+  // -------------------------------------------------------------------------
+  {
+    slug: "devlink",
+    title: "DevLink — URL Shortener & Analytics on k3s + Hetzner",
+    shortTitle: "DevLink on k3s",
+    tagline:
+      "A microservices URL shortener with click analytics, running on a single-node k3s cluster on Hetzner Cloud — provisioned with Terraform, configured with Ansible, fronted by Traefik with auto-issued Let's Encrypt TLS.",
+    category: "Containers",
+    tech: [
+      "Kubernetes (k3s)",
+      "Terraform",
+      "Ansible",
+      "Docker",
+      "Traefik",
+      "cert-manager",
+      "Node.js",
+      "Python / FastAPI",
+      "React",
+      "PostgreSQL",
+      "Redis Streams",
+      "GitHub Actions",
+      "Hetzner Cloud",
+    ],
+    repo: "https://github.com/marciobolsoni/devlink",
+    problem:
+      "Most portfolio-grade k8s demos either run a single nginx pod on minikube or burn $50/month on a managed EKS control plane. I wanted to prove I could ship a real multi-service application — with async events, persistent data and HTTPS — on a production-shaped cluster that still costs less than a cup of coffee a month.",
+    solution:
+      "A four-service URL shortener (auth, url, analytics, frontend) deployed on a single-node k3s cluster running on a low-cost Hetzner VPS. The VPS is provisioned end-to-end with Terraform using the hcloud provider; Ansible roles (base, docker, k3s) configure the host and install the cluster. Traefik (included with k3s) handles ingress and cert-manager negotiates Let's Encrypt certificates automatically. The url-service publishes click events to a Redis Stream which the Python analytics-service consumes asynchronously — keeping the redirect path fire-and-forget. GitHub Actions builds multi-stage, non-root Docker images and pushes them to Docker Hub on every merge to main.",
+    architecture: [
+      "Terraform (hcloud provider) provisions a single cpx21 VPS — `terraform apply` recreates the whole stack in ~60 seconds.",
+      "Ansible roles install Docker and k3s, then copy kubeconfig back to the workstation.",
+      "Four services run as Deployments with 2 replicas each: auth-service (Node.js + JWT), url-service (Node.js), analytics-service (Python + FastAPI), frontend (React + Vite served via Nginx).",
+      "Redis Streams decouple the click-write path from analytics aggregation — the redirect endpoint never blocks on analytics.",
+      "PostgreSQL 16 backs both auth and url services; Redis 7 doubles as event bus and analytics cache.",
+      "Traefik ingress with cert-manager + Let's Encrypt issues and renews TLS automatically.",
+      "GitHub Actions builds multi-stage, non-root images and pushes to Docker Hub on push to main.",
+    ],
+    outcomes: [
+      "Total monthly infrastructure cost ≈ €5.50 — VPS, domain and CI all in.",
+      "Rolling updates with zero downtime across 2 replicas per service.",
+      "End-to-end reproducibility — destroy the VPS, run `terraform apply` + `ansible-playbook` + `kubectl apply`, and the stack is back in under 5 minutes.",
+      "HTTPS automated via cert-manager — no manual cert renewal, ever.",
+    ],
+    whatILearned:
+      "Most of the value of 'k8s on a hyperscaler' disappears when you only need a single node — k3s on a cheap VPS gives you the same kubectl workflow at a fraction of the cost. Redis Streams is a sweet spot between 'just call the analytics service directly' and 'spin up Kafka' — it costs you one container and buys you real decoupling. And the Terraform + Ansible split (provision vs. configure) is worth the extra moving part: when something drifts, you know exactly which tool owns the fix.",
+  },
 ];
 
 export function getProjectBySlug(slug: string) {
