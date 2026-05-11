@@ -59,14 +59,6 @@ export default function HomePage() {
             >
               <Download size={16} /> Download my CV
             </a>
-            <a
-              href="https://cp.certmetrics.com/amazon/en/public/verify/credential/7PJFFX9K0M1Q1DS6"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl glass hover:bg-white/5"
-            >
-              <Award size={16} /> Verify AWS certs
-            </a>
           </div>
           <div className="mt-10 flex flex-wrap items-center gap-6 text-sm text-muted">
             <a
