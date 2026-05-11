@@ -169,6 +169,7 @@ export const projects: Project[] = [
       "Hetzner Cloud",
     ],
     repo: "https://github.com/marciobolsoni/devlink",
+    liveDemo: "https://devlink.marciobolsoni.cloud/",
     problem:
       "Most portfolio-grade k8s demos either run a single nginx pod on minikube or burn $50/month on a managed EKS control plane. I wanted to prove I could ship a real multi-service application — with async events, persistent data and HTTPS — on a production-shaped cluster that still costs less than a cup of coffee a month.",
     solution:
