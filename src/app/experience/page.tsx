@@ -1,6 +1,6 @@
 import { roles, certifications } from "@/data/experience";
 import TechBadge from "@/components/TechBadge";
-import { Award, MapPin } from "lucide-react";
+import { Award, MapPin, ExternalLink } from "lucide-react";
 
 export const metadata = { title: "Experience" };
 
@@ -60,18 +60,28 @@ export default function ExperiencePage() {
         </h2>
         <div className="mt-6 grid md:grid-cols-2 gap-4">
           {certifications.map((c) => (
-            <div key={c.code} className="rounded-2xl glass p-5">
+            <a
+              key={c.code}
+              href={c.verifyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-2xl glass p-5 hover:bg-white/5 transition group"
+            >
               <div className="flex items-start gap-3">
                 <Award size={18} className="text-accent2 mt-0.5" />
-                <div>
+                <div className="flex-1">
                   <p className="font-medium">{c.name}</p>
                   <p className="text-xs text-muted mt-1">
                     Validation number:{" "}
                     <span className="font-mono">{c.code}</span>
                   </p>
+                  <p className="mt-2 text-xs text-accent1 inline-flex items-center gap-1 group-hover:text-accent2 transition">
+                    Verify on cp.certmetrics.com{" "}
+                    <ExternalLink size={11} />
+                  </p>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </section>
