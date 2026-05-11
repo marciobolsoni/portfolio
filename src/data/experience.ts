@@ -11,6 +11,22 @@ export type Role = {
 
 export const roles: Role[] = [
   {
+    start: "2025",
+    end: "present",
+    company: "Independent — Amazon FBA & Family",
+    title: "Self-employed / Career break",
+    location: "Brazil",
+    summary:
+      "Stepped out of full-time employment to run a small Amazon FBA e-commerce business and to be present for family. Honest break, intentional decision.",
+    bullets: [
+      "Operating a small Amazon FBA store end-to-end: sourcing, listing optimisation, P&L, returns and customer support.",
+      "Built operational dashboards in spreadsheets and lightweight automation to track inventory, costs and margins.",
+      "Using the time to keep AWS skills sharp — building public portfolio projects (serverless e-commerce, Terraform-on-AWS, k3s microservices, CI/CD) and maintaining certifications.",
+      "Currently looking to return to full-time engineering — open to Cloud Engineer / DevOps roles in Ireland, the UK or remote across the EU.",
+    ],
+    tech: ["Amazon Seller Central", "Spreadsheet automation", "AWS (hands-on portfolio builds)", "Terraform", "Kubernetes"],
+  },
+  {
     start: "2023",
     end: "2024",
     company: "Halian Sàrl",
@@ -34,25 +50,25 @@ export const roles: Role[] = [
   },
   {
     start: "2021",
-    end: "2023",
-    company: "Independent — Amazon FBA & Family",
-    title: "Self-employed / Career break",
-    location: "Brazil",
+    end: "2022",
+    company: "Sysco Ireland",
+    title: "System Administrator",
+    location: "Ireland",
     summary:
-      "Stepped out of full-time employment to run an Amazon FBA e-commerce business and to be present for the birth of my first daughter. Honest break, intentional decision.",
+      "On-prem and cloud infrastructure support for Sysco's Ireland operations, covering storage, virtualisation, and platform engineering.",
     bullets: [
-      "Operated a small Amazon FBA store end-to-end: sourcing, listing optimisation, P&L, returns and customer support.",
-      "Built operational dashboards in spreadsheets and lightweight automation to track inventory, costs and margins.",
-      "Used the time to study cloud architecture properly and earn AWS Certified Cloud Practitioner and Solutions Architect Associate.",
-      "Returned to full-time engineering refreshed, certified, and with sharper instincts for cost-vs-value trade-offs.",
+      "Maintained storage and on-prem infrastructure supporting business-critical operations across the Ireland sites.",
+      "Contributed to solution architecture decisions for platform upgrades, migrations and capacity planning.",
+      "Resolved incidents across the infrastructure stack under SLA, working closely with the wider IT and network teams.",
+      "Documented procedures and runbooks to ease handover and reduce repeat tickets.",
     ],
-    tech: ["Amazon Seller Central", "Spreadsheet automation", "Self-study: AWS SAA & CLF"],
+    tech: ["Storage", "Solution Architecture", "Linux", "Windows Server", "Networking", "ITIL"],
   },
   {
     start: "2018",
     end: "2021",
     company: "Ericsson Telecom S.A.",
-    title: "Support Analyst",
+    title: "Analista de Sistemas",
     location: "São Paulo, Brazil",
     summary:
       "Cloud and infrastructure support across enterprise telecom workloads, with a focus on AWS-hosted services and cross-team incident resolution.",
@@ -63,6 +79,22 @@ export const roles: Role[] = [
       "Took on ad-hoc infrastructure work — SG audits, IAM policy reviews, log-pipeline troubleshooting.",
     ],
     tech: ["AWS (EC2, S3, RDS, CloudWatch)", "Linux", "Bash", "ITIL ticketing"],
+  },
+  {
+    start: "2015",
+    end: "2018",
+    company: "Hewlett Packard Enterprise",
+    title: "Support Analyst",
+    location: "São Paulo, Brazil",
+    summary:
+      "Customer-facing technical support across HPE infrastructure and enterprise software, with focus on troubleshooting and incident resolution.",
+    bullets: [
+      "Provided technical support to enterprise customers across HPE infrastructure products.",
+      "Triaged and resolved incidents through phone, ticket and remote sessions against SLA targets.",
+      "Escalated complex issues to engineering teams with detailed reproduction steps and logs.",
+      "Built foundational expertise in enterprise IT operations, ITIL and service management.",
+    ],
+    tech: ["Customer Service", "Help Desk Support", "ITIL ticketing", "Windows Server", "Linux"],
   },
 ];
 
