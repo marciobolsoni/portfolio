@@ -71,12 +71,12 @@ export const certifications = [
     name: "AWS Certified Solutions Architect — Associate",
     code: "7PJFFX9K0M1Q1DS6",
     verifyUrl:
-      "https://aws.amazon.com/verification",
+      "https://cp.certmetrics.com/amazon/en/public/verify/credential/7PJFFX9K0M1Q1DS6",
   },
   {
     name: "AWS Certified Cloud Practitioner",
     code: "71EZGCBCXNF4Q39M",
     verifyUrl:
-      "https://aws.amazon.com/verification",
+      "https://cp.certmetrics.com/amazon/en/public/verify/credential/71EZGCBCXNF4Q39M",
   },
 ];
