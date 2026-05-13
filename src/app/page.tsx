@@ -52,7 +52,7 @@ export default function HomePage() {
               <Github size={16} /> GitHub
             </a>
             <a
-              href="https://drive.google.com/file/d/1CmxlQNuq6yhPFAu-y9DGBmAdMu7JqVZR/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1r43sXjtvXI0h8vQbGM0KhjTqcND1ShTp/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-3 rounded-xl glass hover:bg-white/5"
